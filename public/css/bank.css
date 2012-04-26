@@ -34,3 +34,10 @@ legend {
 	-moz-border-bottom-colors: #000000;
 }
 
+.alert-info {
+	width: 450px;
+	text-align: center;
+}
+.alert-info a {
+	font-weight: bold;
+}
