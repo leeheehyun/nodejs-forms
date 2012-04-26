@@ -73,6 +73,12 @@ app.dynamicHelpers({
 });
 
 
+app.get('/', function(req, res){
+  res.render('register.html', {
+    layout:    false,
+    req:       req,
+  });
+});
 app.get('/login', function(req, res){
   res.render('login.html', {
     layout:    false,
