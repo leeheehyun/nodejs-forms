@@ -12,11 +12,7 @@ var MemStore = express.session.MemoryStore;
 
 var app = express.createServer(
   express.logger(),
-  express.static(__dirname + '/public'),
-  express.bodyParser(),
-  express.cookieParser(),
-  // set this to a secret value to encrypt session cookies
-  express.session({ secret: process.env.SESSION_SECRET || 'secret123' })
+  express.static(__dirname + '/public')
 );
 
 /**
@@ -30,10 +26,6 @@ app.configure(function(){
   app.use(express.methodOverride());
   app.use(app.router);
   app.use(express.static(__dirname + '/public'));
-  app.use(express.cookieParser());
-  app.use(express.session({secret: 'some hard secret', store: MemStore({reapInterval: 60000*10})}));
-
-  // disable layout
   app.set("view options", {layout: false});
 
   // make a custom html template
@@ -53,42 +45,5 @@ app.listen(port, function() {
   console.log("Listening on " + port);
 });
 
-app.dynamicHelpers({
-  'host': function(req, res) {
-    return req.headers['host'];
-  },
-  'scheme': function(req, res) {
-    req.headers['x-forwarded-proto'] || 'http'
-  },
-  'url': function(req, res) {
-    return function(path) {
-      return app.dynamicViewHelpers.scheme(req, res) + app.dynamicViewHelpers.url_no_scheme(path);
-    }
-  },
-  'url_no_scheme': function(req, res) {
-    return function(path) {
-      return '://' + app.dynamicViewHelpers.host(req, res) + path;
-    }
-  },
-});
 
-
-app.get('/', function(req, res){
-  res.render('register.html', {
-    layout:    false,
-    req:       req,
-  });
-});
-app.get('/login', function(req, res){
-  res.render('login.html', {
-    layout:    false,
-    req:       req,
-  });
-});
-app.get('/register', function(req, res){
-  res.render('register.html', {
-    layout:    false,
-    req:       req,
-  });
-});
-//require('./routes/handler').routes(app);
+require('./routes/handler').routes(app);
