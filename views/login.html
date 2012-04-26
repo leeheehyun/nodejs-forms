@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Login</title>
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+		<!-- Le styles -->
+		<link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
+		<link href="http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css" rel="stylesheet">
+		<link href="/css/bank.css" rel="stylesheet">
+
+	</head>
+	<body>
+		<div class="container">
+			<div class="content">
+				<form class="form-horizontal" id="login" method='post' action='/login'>
+					<fieldset>
+						<legend>Login</legend>
+						<div class="control-group">
+							<label class="control-label" for="input01">Username</label>
+							<div class="controls">
+								<input type="text" class="input-xlarge" id="user_name" name="user_name" rel="popover" data-content="Enter your username." data-original-title="Full Name">
+							</div>
+						</div>
+
+					  <div class="control-group">
+						  <label class="control-label" for="input01">Password</label>
+						  <div class="controls">
+							  <input type="password" class="input-xlarge">
+						  </div>
+					  </div>
+						<div class="control-group">
+							<label class="control-label" for="input01"></label>
+							<div class="controls">
+								<button id="signup" class="btn btn-success" rel="tooltip" title="first tooltip">Login</button>
+							   - or -
+							  <a href="/Register" class="btn btn-primary">Register</a>
+							</div>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+
+		<!-- Le javascript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="http://twitter.github.com/bootstrap/assets/js/jquery.js"></script>
+		<script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-tooltip.js"></script>
+		<script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-popover.js"></script>
+		<script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-dropdown.js"></script>
+		<script type="text/javascript" src="http://jzaefferer.github.com/jquery-validation/jquery.validate.js"></script>
+
+		<script type="text/javascript" src="/javascript/validate.js"></script>
+
+	</body>
+</html>

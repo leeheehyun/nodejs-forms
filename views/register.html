@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Register</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="/css/bank.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+  </head>
+  <body>	  
+	
+	  <div class="container">
+        <div class="content">
+			  <form class="form-horizontal" id="registerHere" method='post' action='/register'>
+				  <fieldset>
+					  <legend>Registration Form</legend>
+					  <div class="control-group">
+						  <label class="control-label" for="input01">Name</label>
+						  <div class="controls">
+							  <input type="text" class="input-xlarge" id="user_name" name="user_name" rel="popover" data-content="Enter your first and last name." data-original-title="Full Name">
+						  </div>
+					  </div>
+
+					  <div class="control-group">
+						  <label class="control-label" for="input01">Email</label>
+						  <div class="controls">
+							  <input type="text" class="input-xlarge" id="user_email" name="user_email" rel="popover" data-content="What’s your email address?" data-original-title="Email">
+						  </div>
+					  </div>
+
+					  <div class="control-group">
+						  <label class="control-label" for="input01">Password</label>
+						  <div class="controls">
+							  <input type="password" class="input-xlarge" id="pwd" name="pwd" rel="popover" data-content="6 characters or more! " data-original-title="Password" >
+						  </div>
+					  </div>
+					  <div class="control-group">
+						  <label class="control-label" for="input01">Confirm Password</label>
+						  <div class="controls">
+							  <input type="password" class="input-xlarge" id="cpwd" name="cpwd" rel="popover" data-content="Re-enter your password for confirmation." data-original-title="Re-Password" >
+						  </div>
+					  </div>
+
+					  <div class="control-group">
+						  <label class="control-label" for="input01">Gender</label>
+						  <div class="controls">
+							  <select name="gender" id="gender" >
+								  <option value="">Gender</option>
+								  <option value="male">Male</option>
+								  <option value="female">Female</option>
+							  </select>
+						  </div>
+					  </div>
+
+
+					  <div class="control-group">
+						  <label class="control-label" for="input01"></label>
+						  <div class="controls">
+							  <button id="signup" class="btn btn-success" rel="tooltip" title="first tooltip">Create My Account</button>
+							   - or -
+							  <a href="/login" class="btn btn-primary">Login</a>
+						  </div>
+					  </div>
+				  </fieldset>
+			  </form>
+		  </div>
+	  </div>
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://twitter.github.com/bootstrap/assets/js/jquery.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-tooltip.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-popover.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-dropdown.js"></script>
+	<script type="text/javascript" src="http://jzaefferer.github.com/jquery-validation/jquery.validate.js"></script>
+
+	<script type="text/javascript" src="/javascript/validate.js"></script>
+
+  
+
+  </body>
+</html>
+
