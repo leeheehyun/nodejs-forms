@@ -1,7 +1,7 @@
 Introduction
-===========
+============
 
-This code uses node.js, twitter-bootstrap and jquery to create some sample forms for you.
+This code uses [node.js](http://www.nodejs.org/), [twitter-bootstrap](http://twitter.github.com/bootstrap/) and [jquery](http://jquery.com/) to create some sample forms for you.
 
 Forms porvided so far include:
 + Login form 
@@ -19,4 +19,9 @@ npm install
 node server.js
 ```
 
-Finally, naviagte to ```http://127.0.0.1:5000```
+Finally, naviagte to ```http://127.0.0.1:5000``` in your browser and enjoy ^^
+
+License
+=======
+
+MIT :)
